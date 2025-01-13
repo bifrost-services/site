@@ -194,7 +194,7 @@ a:hover {
 /* Call-to-Action Section */
 .services-page .cta {
     padding: 5px 20px;
-    background-color: var(--highlight-color);
+    background-color: var(--neutral-color);
     color: var(--primary-color);
     text-align: center;
 }
