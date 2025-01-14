@@ -901,8 +901,8 @@ a:hover {
 /* Safety Protocols Section */
 .safety-protocols-section {
     padding: 60px 20px;
-    background-color: var(--neutral-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .safety-protocols-section h2 {
@@ -936,7 +936,7 @@ a:hover {
 /* Call to Action Section */
 .cta-section {
     padding: 5px 20px;
-    background-color: var(--highlight-color);
+    background-color: var(--neutral-color);
     color: var(--primary-color);
     text-align: center;
 }
