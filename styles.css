@@ -38,9 +38,6 @@ a:hover {
 
 
 
-
-
-
 /* General Styles for Services Page */
 .services-page {
     font-family: 'Roboto', sans-serif;
@@ -57,6 +54,7 @@ a:hover {
     background-size: cover;
     background-position: center;
     color: var(--neutral-color);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* Curved bottom */
 }
 
 .services-page .hero::before {
@@ -87,32 +85,19 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.services-page .hero-buttons .btn {
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: var(--neutral-color);
-    background-color: var(--accent-color);
-    border: none;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.services-page .hero-buttons .btn:hover {
-    background-color: var(--highlight-color);
-}
-
-/* Service Section */
+/* Section Styling */
 .services-page .service-section {
     padding: 60px 20px;
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--secondary-color) 60%, var(--primary-color));
     color: var(--neutral-color);
+    position: relative;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%); /* Wave effect */
 }
 
 .services-page .service-section.bg-light {
-    background-color: var(--neutral-color);
+    background: linear-gradient(135deg, var(--neutral-color) 60%, #fff);
     color: var(--primary-color);
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%); /* Opposite wave effect */
 }
 
 .services-page .service-section h2 {
@@ -122,105 +107,64 @@ a:hover {
 
 .services-page .truck-details {
     padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     list-style: none;
     margin-bottom: 20px;
-    color: var(--neutral-color); /* Ensures white text */
+    color: var(--neutral-color);
 }
 
 .services-page .truck-details li {
     margin-bottom: 8px;
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--neutral-color); /* Explicitly set text to white */
 }
 
-.services-page .service-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.services-page .service-section ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.services-page .service-section img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Why Choose Section */
-.services-page .why-choose {
-    padding: 60px 20px;
-    background-color: var(--primary-color);
-    color: var(--neutral-color);
-    text-align: center;
-}
-
-.services-page .why-choose h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-}
-
-.services-page .why-choose .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-
-.services-page .why-choose .col-md-4 {
-    flex: 1 1 300px;
-    max-width: 300px;
-    text-align: left;
-}
-
-.services-page .why-choose h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.services-page .why-choose p {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Call-to-Action Section */
+/* CTA Section */
 .services-page .cta {
-    padding: 5px 20px;
-    background-color: var(--neutral-color);
-    color: var(--primary-color);
+    padding: 50px 20px;
+    background-color: var(--neutral-color); /* Clean, solid color for simplicity */
+    color: var(--primary-color); /* Dark text for contrast */
     text-align: center;
+    border-radius: 10px; /* Rounded edges for a modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin: 40px auto;
+    max-width: 900px; /* Restrict width to avoid stretching too far */
 }
 
 .services-page .cta h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: var(--primary-color); /* Dark text for visibility */
 }
 
-.services-page .cta a {
+.services-page .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color); /* Consistent with the heading */
+}
+
+.services-page .cta .btn {
     margin: 10px;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     text-transform: uppercase;
     color: var(--neutral-color);
     background-color: var(--accent-color);
+    border: none;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.services-page .cta a:hover {
+.services-page .cta .btn:hover {
     background-color: var(--secondary-color);
+    transform: translateY(-3px); /* Adds a hover lift effect */
 }
 
-/* Responsive Styles */
+/* Responsive Adjustments */
 @media (max-width: 1024px) {
     .services-page .hero h1 {
         font-size: 2.5rem;
@@ -233,20 +177,12 @@ a:hover {
     .services-page .service-section h2 {
         font-size: 1.8rem;
     }
-
-    .services-page .truck-details li {
-        font-size: 0.9rem;
-    }
-
-    .services-page .why-choose h2 {
-        font-size: 2rem;
-    }
 }
 
 @media (max-width: 768px) {
     .services-page .hero {
         padding: 80px 10px;
-        background-size: cover;
+        clip-path: none; /* Remove wave effect */
     }
 
     .services-page .hero h1 {
@@ -256,17 +192,14 @@ a:hover {
     .services-page .hero p {
         font-size: 1rem;
     }
+    .services-page .service-section.bg-light {
+        clip-path: none; /* Remove wave effect */
+    }
 
     .services-page .service-section {
         padding: 40px 10px;
-    }
-
-    .services-page .truck-details {
-        padding: 8px 15px;
-    }
-
-    .services-page .why-choose {
-        padding: 40px 10px;
+        background: var(--secondary-color); /* Solid color on mobile */
+        clip-path: none; /* Remove wave effect */
     }
 
     .services-page .cta {
@@ -285,6 +218,12 @@ a:hover {
 
     .services-page .hero p {
         font-size: 0.9rem;
+    }
+
+    .services-page .service-section {
+        padding: 30px 10px; /* Adjust spacing for smaller screens */
+        background: var(--secondary-color); /* Keep solid background */
+        clip-path: none; /* No gradients or wave effects */
     }
 
     .services-page .cta h2 {
@@ -306,17 +245,16 @@ a:hover {
 
 
 
-
-
-/* Contact Page Specific Styles */
+/* Contact Page Hero Section */
 .contact-page .hero {
+    position: relative;
     text-align: center;
-    padding: 150px 20px;
+    padding: 160px 20px; /* Generous padding for spacing */
     background-image: url('assets/images/contact-hero.jpg');
     background-size: cover;
     background-position: center;
     color: var(--neutral-color);
-    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* Curved bottom */
 }
 
 .contact-page .hero::before {
@@ -326,117 +264,165 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
     z-index: 1;
 }
 
-.contact-page .hero h1,
-.contact-page .hero p {
+.contact-page .hero h1 {
     position: relative;
     z-index: 2;
-}
-
-.contact-page .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .contact-page .hero p {
+    position: relative;
+    z-index: 2;
     font-size: 1.2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* Contact Section */
 .contact-page .contact-section {
+    padding: 100px 20px; /* Generous padding */
+    background: linear-gradient(135deg, var(--neutral-color) 60%, #ffffff);
+    color: var(--primary-color);
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 40px;
-    padding: 40px;
-    background-color: var(--neutral-color);
-    color: var(--primary-color);
+    justify-content: center;
+    position: relative;
 }
 
 .contact-page .form-container,
 .contact-page .info-container {
     flex: 1 1 400px;
     max-width: 600px;
-    box-sizing: border-box;
-    margin: 0 auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2; /* Ensures containers are above gradient */
+}
+
+.contact-page .form-container {
+    margin-bottom: 60px; /* Space below the form */
 }
 
 /* Form Styles */
-.contact-page .contact-section form {
+.contact-page .form-container form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px; /* Space between form elements */
 }
 
-.contact-page .contact-section form label {
-    font-weight: bold;
-}
-
-.contact-page .contact-section form input,
-.contact-page .contact-section form textarea {
-    padding: 10px;
+.contact-page .form-container form input,
+.contact-page .form-container form textarea {
+    padding: 15px;
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
     font-size: 1rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
-.contact-page .contact-section form textarea {
+.contact-page .form-container form textarea {
     resize: none;
+    height: 100px;
 }
 
-.contact-page .contact-section form button {
-    padding: 10px;
+.contact-page .form-container form button {
+    padding: 15px;
     background-color: var(--accent-color);
     color: var(--neutral-color);
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-page .contact-section form button:hover {
+.contact-page .form-container form button:hover {
     background-color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
-/* Info Styles */
-.contact-page .info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap: 15px;
-}
-
+/* Info Container */
 .contact-page .info-container h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
 }
 
 .contact-page .info-container p {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .contact-page .info-container a {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Map Section */
 .contact-page .map {
-    padding: 40px;
+    padding: 80px 20px;
+    background-color: var(--secondary-color);
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%); /* Shallow top curve */
     text-align: center;
+    margin-top: 40px; /* Space above the map */
+    position: relative;
+    z-index: 1; /* Places map below other elements */
 }
 
 .contact-page .map iframe {
     width: 100%;
     height: 400px;
-    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+/* CTA Section */
+.contact-page .cta {
+    padding: 60px 20px;
+    background-color: var(--neutral-color);
+    color: var(--primary-color);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.contact-page .cta h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-page .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.contact-page .cta .btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--neutral-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-page .cta .btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 /* Responsive Adjustments */
@@ -451,11 +437,26 @@ a:hover {
 
     .contact-page .contact-section {
         flex-direction: column;
+        padding: 60px 20px;
     }
 
     .contact-page .form-container,
     .contact-page .info-container {
         max-width: 100%;
+        padding: 30px;
+    }
+
+    .contact-page .map {
+        clip-path: none;
+        margin-top: 20px;
+        padding: 40px 10px;
+    }
+
+    .contact-page .cta {
+        padding: 40px 15px;
+    }
+    .contact-page .hero {
+        clip-path: none;
     }
 }
 
@@ -466,15 +467,24 @@ a:hover {
 
 
 
-/* Home Page Specific Styles */
+
+
+
+
+
+/* Hero Section */
 .home-page .hero {
-    background-size: cover;
-    background-position: center;
-    padding: 150px 20px;
-    text-align: center;
-    position: relative;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)), url('assets/images/hero.jpg');
+    background-size: cover; /* Ensures the entire image fits */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    background-position: center; /* Centers the image */
     color: var(--neutral-color);
+    padding: 150px 20px;
+    position: relative;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
+
 
 .home-page .hero-overlay {
     position: absolute;
@@ -494,6 +504,7 @@ a:hover {
 
 .home-page .hero-content h1 {
     font-size: 2.8rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin-bottom: 1rem;
 }
 
@@ -511,122 +522,147 @@ a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .home-page .hero-buttons .btn:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    background-color: var(--highlight-color);
 }
 
+/* Services Overview */
 .home-page .services-overview {
     padding: 60px 20px;
+    background-color: var(--neutral-color);
+    color: var(--primary-color);
     text-align: center;
-  }
-  
-  .home-page .services-overview .row {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+.home-page .services-overview h2 {
+    color: var(--accent-color);
+    margin-bottom: 30px;
+}
+
+.home-page .services-overview .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Equal spacing between items */
-  }
-  
-  .home-page .service-item {
+    gap: 20px;
+}
+
+.home-page .service-item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit; /* Ensure text color matches current styles */
+    max-width: 300px; /* Matches the size of service-item */
+    margin: 0 auto; /* Center-align the item within the row */
+}
+
+.home-page .service-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    margin: 0 auto;
     text-align: center;
-  }
-  
-  .home-page .service-item img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* Optional: For circular images */
-    object-fit: cover;
-    margin-bottom: 15px; /* Space between the image and the heading */
-  }
-  
-  .home-page .service-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .home-page .service-item p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px; /* Space after the text */
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .home-page .services-overview .row {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .home-page .service-item {
-      max-width: 100%;
-    }
-  }
-  
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
 
-  .why-choose {
+.home-page .service-item:hover {
+    transform: translateY(-10px);
+}
+
+.home-page .service-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.home-page .service-item h3 {
+    font-size: 1.5rem;
+    color: var(--neutral-color);
+    margin-bottom: 10px;
+}
+
+.home-page .service-item p {
+    font-size: 1rem;
+    color: var(--neutral-color);
+    line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home-page .services-overview .row {
+        flex-direction: column;
+        align-items: center;
+        clip-path: none; /* Remove wave effect */
+    }
+    .home-page .hero {
+        clip-path: none; /* Remove wave effect */
+    }
+
+    .home-page .service-item-link {
+        max-width: 100%; /* Allow items to fill available space */
+    }
+    .home-page .services-overview {
+        clip-path: none; /* Remove wave effect */
+    }
+}
+
+/* Why Choose Us */
+.home-page .why-choose {
     padding: 60px 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--neutral-color);
     text-align: center;
-  }
-  
-  .why-choose h2 {
+}
+
+.home-page .why-choose h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
     color: var(--highlight-color);
-  }
-  
-  .why-choose .row {
+}
+
+.home-page .why-choose .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-  }
-  
-  .why-choose .column {
+}
+
+.home-page .why-choose .column {
     flex: 1;
     max-width: 300px;
     text-align: center;
-  }
-  
-  .why-choose .icon {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-page .why-choose .icon {
     font-size: 3rem;
     color: var(--accent-color);
     margin-bottom: 15px;
-  }
-  
-  .why-choose h3 {
+}
+
+.home-page .why-choose h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--neutral-color);
-  }
-  
-  .why-choose p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-
-/* Keyframes for Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
-/* Responsive Styles */
+.home-page .why-choose p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .home-page .hero-content h1 {
         font-size: 2rem;
@@ -638,10 +674,23 @@ a:hover {
 
     .home-page .services-overview .row,
     .home-page .why-choose .row {
-        flex-direction: column;
+        flex-direction: column;   
+    }
+
+    .home-page .why-choose .row {
+        flex-direction: column; /* Stacks the items vertically */
+        align-items: center; /* Centers items vertically */
+    }
+
+    .home-page .why-choose .column {
+        flex: 1 1 100%; /* Columns take full width on smaller screens */
+        max-width: 100%; /* Ensures the column stretches to full width */
+    }
+
+    .home-page .service-item {
+        max-width: 100%;
     }
 }
-
   
 
 
@@ -650,18 +699,38 @@ a:hover {
 
 
 
-
   /* Footer Styles */
-.site-footer {
+  .site-footer {
+    position: relative;
     background-color: var(--secondary-color); /* Matches the deep grey accent */
     color: var(--neutral-color); /* Light grey for text */
     padding: 40px 20px; /* Spacing */
+    overflow: hidden; /* Ensures no content overflows the curve */
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: -80px; /* Adjust the arch height */
+    left: 0;
+    width: 100vw; /* Ensures the arch spans the full viewport width */
+    height: 100px; /* Height of the arch */
+    background: linear-gradient(
+        to bottom,
+        var(--neutral-color), /* Color of the section above */
+        var(--secondary-color) /* Footer background color */
+    ); /* Smooth gradient transition */
+    border-bottom-left-radius: 100vw 80px; /* Smooth arch spanning full width */
+    border-bottom-right-radius: 100vw 80px;
+    z-index: 1;
 }
 
 .site-footer h5 {
     color: var(--accent-color); /* Teal for headings */
     font-size: 1.2rem;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 2; /* Ensures text is above the curve */
 }
 
 .site-footer p, 
@@ -669,6 +738,8 @@ a:hover {
     color: var(--neutral-color); /* Ensure consistent text color */
     font-size: 0.9rem;
     line-height: 1.6;
+    position: relative;
+    z-index: 2; /* Ensures text is above the curve */
 }
 
 .site-footer a:hover {
@@ -687,12 +758,16 @@ a:hover {
     margin: 0; /* Removes extra margin from the text */
     font-size: 1rem; /* Adjusts text size if necessary */
     color: var(--neutral-color); /* Ensures consistent color */
+    position: relative;
+    z-index: 2; /* Ensures text is above the curve */
 }
 
 .site-footer .social-icons a {
     font-size: 1.5rem; /* Adjust icon size */
     color: var(--neutral-color); /* Matches other text */
     transition: color 0.3s;
+    position: relative;
+    z-index: 2; /* Ensures icons are above the curve */
 }
 
 .site-footer .social-icons a:hover {
@@ -702,11 +777,15 @@ a:hover {
 .site-footer hr {
     border-color: rgba(255, 255, 255, 0.1); /* Subtle divider line */
     margin: 20px 0;
+    position: relative;
+    z-index: 2; /* Ensures line is above the curve */
 }
 
 .site-footer .text-center {
     font-size: 0.85rem; /* Smaller text for the copyright */
     margin-top: 15px;
+    position: relative;
+    z-index: 2; /* Ensures text is above the curve */
 }
 
 /* Responsive Footer Adjustments */
@@ -729,82 +808,82 @@ a:hover {
 
 
 
-
 /* Navbar Styles */
 .navbar {
-    background-color: var(--secondary-color);
-    padding: 0.75rem 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .navbar-brand {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
     color: var(--accent-color);
-    font-size: 1.8rem;
     font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.navbar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .nav-link {
     color: var(--neutral-color);
     font-size: 1rem;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar .nav-link:hover {
-    color: var(--accent-color);
-}
-
-/* Adjust Hamburger Menu for Mobile */
-.navbar-toggler.custom-toggler {
-    width: 35px; /* Smaller width */
-    height: 35px; /* Smaller height */
-    padding: 0; /* Remove padding */
-    position: absolute;
-    right: 10px; /* Align to the right edge */
-    top: 10px; /* Add some space from the top */
-    background-color: transparent; /* No background */
-    border: none; /* Remove border */
-}
-
-.navbar-toggler-icon {
-    width: 20px; /* Smaller hamburger icon width */
-    height: 2px; /* Thin hamburger lines */
-    background-color: var(--neutral-color); /* Match icon color to your theme */
-    position: relative;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-    content: '';
-    width: 20px; /* Match the width of the main line */
-    height: 2px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: var(--highlight-color);
+    transform: translateY(-2px);
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
+  
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
     background-color: var(--neutral-color);
-    position: absolute;
-    left: 0;
+    position: relative;
+    display: block;
     transition: all 0.3s ease-in-out;
-}
+  }
 
-.navbar-toggler-icon::before {
-    top: -6px; /* Position the top line */
-}
-
-.navbar-toggler-icon::after {
-    top: 6px; /* Position the bottom line */
-}
-
-/* Adjustments for Navbar on Small Screens */
-@media (max-width: 768px) {
-    .navbar .navbar-brand {
-        font-size: 1rem; /* Smaller brand logo */
+  /* Dropdown Menu */
+  .dropdown-menu {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-item {
+    color: var(--neutral-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem;
+      background-color: var(--secondary-color); /* Mobile-specific background color */
     }
-
-    .navbar-nav .nav-item {
-        font-size: 0.9rem; /* Reduce font size for nav items */
+    .navbar-brand {
+      font-size: 1.2rem;
     }
-}
+  }
+  
 
 
 
@@ -912,9 +991,20 @@ a:hover {
 
 .safety-protocols-section .row {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Allows items to wrap into two rows if necessary */
+    justify-content: center; /* Centers the columns horizontally */
+    gap: 20px; /* Adds space between columns */
+    margin: 0 auto; /* Centers the entire row within the section */
+    max-width: 800px; /* Adjust to control the total width of the columns */
 }
+
+.safety-protocols-section .col-md-6 {
+    flex: 1 1 45%; /* Each column takes up about 45% of the row */
+    max-width: 45%; /* Ensures columns do not exceed their allocated space */
+    box-sizing: border-box; /* Ensures padding and border are included in the column width */
+    text-align: center; /* Centers text within each column */
+}
+
 
 .safety-protocols-section ul {
     list-style-type: disc;
@@ -964,16 +1054,28 @@ a:hover {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .safety-page .hero {
+        height: 40vh; /* Further reduce the height */
+        min-height: 250px; /* Ensure it’s not too small */
+        background-size: cover; /* Ensures the image fills the section */
+        background-repeat: no-repeat; /* Prevents image duplication */
+        background-position: center; /* Keeps the image centered */
+    }
+
+    .safety-page .hero-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
     .safety-page .hero h1 {
-        font-size: 2rem;
+        font-size: 1.6rem; /* Adjust heading size */
     }
 
     .safety-page .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem; /* Adjust paragraph size */
     }
 
-    .certifications-section .row,
-    .safety-protocols-section .row {
+
+    .certifications-section .row{
         flex-direction: column;
         align-items: center;
     }
@@ -981,6 +1083,26 @@ a:hover {
     .cta-section h2 {
         font-size: 1.5rem;
     }
+    .safety-protocols-section .row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center; /* Center-align the items */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .safety-protocols-section .col-md-6 {
+        flex: 1 1 100%; /* Full width for each column */
+        max-width: 100%; /* Ensure it fills the container */
+        text-align: left; /* Align text for readability */
+    }
+
+    .safety-protocols-section h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .safety-protocols-section ul {
+        padding-left: 1.5rem; /* Add indentation for lists */
+    }
+
 }
 
 

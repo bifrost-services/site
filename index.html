@@ -10,20 +10,15 @@
   <link rel="stylesheet" href="styles.css">
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        const navbarPlaceholder = document.getElementById('navbar-placeholder');
-        navbarPlaceholder.innerHTML = data;
+      fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('navbar-placeholder').innerHTML = data;
 
-        // Reinitialize Bootstrap components
-        const script = document.createElement('script');
-        script.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js";
-        script.onload = () => {
-          // Any additional initialization if required
-        };
-        document.body.appendChild(script);
-      });
+          const script = document.createElement('script');
+          script.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js";
+          document.body.appendChild(script);
+        });
 
       fetch('footer.html')
         .then(response => response.text())
@@ -50,58 +45,65 @@
   </section>
 
   <!-- Services Overview -->
-  <section class="services-overview">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="row">
+<section class="services-overview">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="row">
+      <a href="services.html#hydrovacs" class="service-item-link">
         <div class="service-item">
           <img src="assets/images/hydrovac-excavation.jpg" alt="Hydrovac Excavation Services">
           <h3>Hydrovac Excavation</h3>
           <p>Precision Digging with Advanced Technology. Our Hydrovac Excavation service combines high-pressure water and powerful vacuum systems to provide a non-destructive, precise excavation solution. This ensures safety and accuracy when working near underground utilities or delicate infrastructure.</p>
         </div>
+      </a>
+      <a href="services.html#combo-vacs" class="service-item-link">
         <div class="service-item">
           <img src="assets/images/combo-vac-services.jpg" alt="Combo Vac Industrial Services">
           <h3>Combo Vac Services</h3>
           <p>Integrated Cleaning and Vacuum Solutions. Our Combo Vac units are designed to handle a variety of industrial cleaning tasks efficiently. Combining high-pressure washing and vacuuming, this service ensures a clean, safe, and hazard-free worksite.</p>
         </div>
+      </a>
+      <a href="services.html#water-trucks" class="service-item-link">
         <div class="service-item">
           <img src="assets/images/water-delivery.jpg" alt="Reliable Water Delivery Alberta">
           <h3>Water Delivery</h3>
           <p>Reliable and Efficient Water Solutions. We provide timely delivery of potable and non-potable water to meet your project’s needs. Whether for construction, agriculture, or emergency situations, our fleet is equipped to handle jobs of all sizes.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-<section class="why-choose">
-  <div class="container">
-    <h2>Why Choose Us</h2>
-    <div class="row">
-      <div class="column">
-        <div class="icon">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <h3>Uncompromising Safety</h3>
-        <p>We prioritize safety in every project, adhering to the highest industry standards and ensuring our team is equipped with the latest training and certifications to minimize risks on every site.</p>
-      </div>
-      <div class="column">
-        <div class="icon">
-          <i class="fas fa-tools"></i>
-        </div>
-        <h3>Proven Experience</h3>
-        <p>With over a decade of experience, our skilled team has tackled projects of all sizes, providing reliable industrial solutions that meet and exceed client expectations.</p>
-      </div>
-      <div class="column">
-        <div class="icon">
-          <i class="fas fa-leaf"></i>
-        </div>
-        <h3>Commitment to Sustainability</h3>
-        <p>We adopt eco-friendly practices to minimize our environmental impact. From waste management to resource-efficient operations, we strive to build a greener future for our community.</p>
-      </div>
+      </a>
     </div>
   </div>
 </section>
+
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="row">
+        <div class="column">
+          <div class="icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Uncompromising Safety</h3>
+          <p>We prioritize safety in every project, adhering to the highest industry standards and ensuring our team is equipped with the latest training and certifications to minimize risks on every site.</p>
+        </div>
+        <div class="column">
+          <div class="icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Proven Experience</h3>
+          <p>With over a decade of experience, our skilled team has tackled projects of all sizes, providing reliable industrial solutions that meet and exceed client expectations.</p>
+        </div>
+        <div class="column">
+          <div class="icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Commitment to Sustainability</h3>
+          <p>We adopt eco-friendly practices to minimize our environmental impact. From waste management to resource-efficient operations, we strive to build a greener future for our community.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div id="footer-placeholder"></div>
 </body>
