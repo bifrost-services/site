@@ -1,77 +1,66 @@
+<!-- Updated Navbar HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Navigate BiFrost Industrial Services' website for Hydrovac, Combo Vac, and Water Truck services across Alberta. Explore services, projects, and contact us.">
-  <meta name="keywords" content="Hydrovac Services Navigation, Combo Vac Trucks Alberta, Industrial Services Website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hydrovac, Combo Vac, and Water Truck services across Alberta">
+  <meta name="keywords" content="Hydrovac, Combo Vac, Water Truck, Alberta">
   <meta name="author" content="BiFrost Industrial Services">
-  <title>Navigation - BiFrost Industrial Services</title>
-
-  <!-- Bootstrap CSS -->
+  <title>BiFrost Navigation</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
-      
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/logo.png" alt="BiFrost Logo" class="navbar-logo me-2">
-      </a>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/images/logo.png" alt="BiFrost Logo" class="navbar-logo me-2">
+    </a>
 
-      <!-- Call Button (visible always) -->
-      <a href="tel:4034460070" class="btn btn-outline-light me-2 d-none d-lg-inline-block">
-        Call 403 446 0070
-      </a>
+    <!-- Call Button (Desktop Only) -->
+    <a href="tel:4034460070" class="btn btn-call d-none d-lg-inline-block">Call 403 446 0070</a>
 
-      <!-- Mobile Toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Hamburger Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Collapsed Nav Items -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav text-end">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="services.html">All Services</a></li>
-              <li><a class="dropdown-item" href="services.html#combo-vacs">Combo Vacs</a></li>
-              <li><a class="dropdown-item" href="services.html#hydrovacs">Hydrovacs</a></li>
-              <li><a class="dropdown-item" href="services.html#water-trucks">Water Trucks</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects.html">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="safety.html">Safety</a>
-          </li>
-
-          <!-- Call button visible in collapsed mobile menu -->
-          <li class="nav-item d-lg-none">
-            <a href="tel:4034460070" class="nav-link text-warning fw-bold">Call 403 446 0070</a>
-          </li>
-        </ul>
-      </div>
-
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav text-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+            <li><a class="dropdown-item" href="services.html#combo-vacs">Combo Vacs</a></li>
+            <li><a class="dropdown-item" href="services.html#hydrovacs">Hydrovacs</a></li>
+            <li><a class="dropdown-item" href="services.html#water-trucks">Water Trucks</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="safety.html">Safety</a>
+        </li>
+        <!-- Mobile Call Button -->
+        <li class="nav-item d-lg-none">
+          <a href="tel:4034460070" class="btn btn-call">Call 403 446 0070</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
