@@ -810,7 +810,7 @@ a:hover {
 
 /* Navbar Styles */
 .navbar {
-    background-color: rgba(149, 154, 163, 0.98);
+    background-color: --secondary-color;
     padding: 1rem 1.25rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 9999;
