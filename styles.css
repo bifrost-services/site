@@ -814,6 +814,13 @@ a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     z-index: 9999;
   }
+  .nav-link.active {
+    color: var(--neutral-color); /* or match it to your other nav links */
+  }
+  
+  .nav-link.active:hover {
+    color: var(--highlight-color); /* if you want hover to still highlight */
+  }
   
   .navbar .container-fluid {
     display: flex;
