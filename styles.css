@@ -896,7 +896,7 @@ a:hover {
   /* === MOBILE MENU === */
   @media (max-width: 991px) {
     .navbar-collapse {
-      background-color: #f9f9f9;
+      background-color: #000000;
       padding: 1rem;
       border-radius: 0 0 10px 10px;
     }
