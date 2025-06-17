@@ -810,7 +810,7 @@ a:hover {
 
 /* Navbar Styles */
 .navbar {
-    background-color: rgba(57, 62, 70, 0.8); /* 80% opaque */
+    background-color: rgba(255, 255, 255, 0.705); /* 80% opaque */
     padding: 1rem 1.25rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 9999;
@@ -842,13 +842,13 @@ a:hover {
   }
   
   .nav-link {
-    color: var(--neutral-color);
+    color: var(--secondary-color);
     font-size: 1rem;
     font-weight: 500;
   }
   
   .nav-link:hover {
-    color: var(--highlight-color);
+    color: var(--secondary-color);
   }
   
   /* Mobile styles */
