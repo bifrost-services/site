@@ -17,16 +17,26 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/images/logo.png" alt="BiFrost Services" class="navbar-logo me-2">
-        BiFrost Services
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.png" alt="BiFrost Logo" class="navbar-logo me-2">
       </a>
+
+      <!-- Call Button (visible always) -->
+      <a href="tel:4034460070" class="btn btn-outline-light me-2 d-none d-lg-inline-block">
+        Call 403 446 0070
+      </a>
+
+      <!-- Mobile Toggle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Collapsed Nav Items -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav text-end">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
@@ -50,8 +60,14 @@
           <li class="nav-item">
             <a class="nav-link" href="safety.html">Safety</a>
           </li>
+
+          <!-- Call button visible in collapsed mobile menu -->
+          <li class="nav-item d-lg-none">
+            <a href="tel:4034460070" class="nav-link text-warning fw-bold">Call 403 446 0070</a>
+          </li>
         </ul>
       </div>
+
     </div>
   </nav>
 
