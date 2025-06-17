@@ -833,28 +833,28 @@ a:hover {
     color: var(--accent-color);
   }
   
-  /* Mobile-specific navbar background and alignment */
-  @media (max-width: 991px) {
+  /@media (max-width: 991px) {
     .navbar {
-      background-color: var(--secondary-color); /* Solid background for mobile */
+      background-color: var(--secondary-color);
     }
   
     .navbar-collapse {
-      text-align: left;
+      justify-content: flex-end !important;
     }
   
     .navbar-nav {
+      text-align: right;
       width: 100%;
+      align-items: flex-end;
     }
   
     .navbar-nav .nav-item {
-      width: 100%;
+      width: auto;
     }
   
     .navbar-nav .nav-link {
-      display: block;
-      width: 100%;
-      padding-left: 1rem;
+      display: inline-block;
+      padding-right: 1rem;
     }
   }
   
