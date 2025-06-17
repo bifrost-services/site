@@ -808,81 +808,56 @@ a:hover {
 
 
 
-/* Navbar Styles */
+/* NAVBAR FIXES */
+
+/* Desktop navbar background and logo size */
 .navbar {
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background-color: rgba(34, 40, 49, 0.98); /* Less transparent background */
     padding: 1rem 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
   
-  .navbar-brand {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
   .navbar-logo {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
   }
   
-  .nav-link {
-    color: var(--neutral-color);
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease, transform 0.2s;
+  /* Ensure logo and brand name align properly */
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
   }
   
-  .nav-link:hover {
-    color: var(--highlight-color);
-    transform: translateY(-2px);
-  }
-  
-  .navbar-toggler {
-    border: none;
-  }
-  
-  .navbar-toggler-icon {
-    width: 30px;
-    height: 3px;
-    background-color: var(--neutral-color);
-    position: relative;
-    display: block;
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* Dropdown Menu */
-  .dropdown-menu {
-    background-color: var(--secondary-color);
-    border-radius: 8px;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown-item {
-    color: var(--neutral-color);
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-item:hover {
-    background-color: var(--highlight-color);
-    color: var(--primary-color);
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
+  /* Mobile-specific navbar background and alignment */
+  @media (max-width: 991px) {
     .navbar {
-      padding: 1rem;
-      background-color: var(--secondary-color); /* Mobile-specific background color */
+      background-color: var(--secondary-color); /* Solid background for mobile */
     }
-    .navbar-brand {
-      font-size: 1.2rem;
+  
+    .navbar-collapse {
+      text-align: left;
+    }
+  
+    .navbar-nav {
+      width: 100%;
+    }
+  
+    .navbar-nav .nav-item {
+      width: 100%;
+    }
+  
+    .navbar-nav .nav-link {
+      display: block;
+      width: 100%;
+      padding-left: 1rem;
     }
   }
+  
   
 
 
