@@ -884,13 +884,13 @@ a:hover {
   
   /* === DROPDOWN MENU === */
   .dropdown-menu {
-    background-color: var(--secondary-color, #393E46);
+    background-color: var(--neutral-color);
     border: none;
     border-radius: 8px;
   }
   
   .dropdown-item {
-    color: var(--neutral-color, #EEEEEE);
+    color: var(--primary-color);
     padding: 0.5rem 1rem;
   }
   
