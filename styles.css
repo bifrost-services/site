@@ -833,7 +833,7 @@ a:hover {
     color: var(--accent-color);
   }
   
-  /@media (max-width: 991px) {
+  @media (max-width: 991px) {
     .navbar {
       background-color: var(--secondary-color);
     }
