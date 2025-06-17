@@ -806,20 +806,12 @@ a:hover {
 
 
 
-
-/* === NAVBAR RESET === */
+/* === NAVBAR STYLING === */
 .navbar {
-    background-color: rgba(34, 40, 49, 0.95); /* Semi-opaque dark background */
+    background-color: #f9f9f9; /* Light background */
     padding: 0.75rem 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 9999;
-  }
-  .nav-link.active {
-    color: var(--neutral-color); /* or match it to your other nav links */
-  }
-  
-  .nav-link.active:hover {
-    color: var(--highlight-color); /* if you want hover to still highlight */
   }
   
   .navbar .container-fluid {
@@ -828,89 +820,80 @@ a:hover {
     justify-content: space-between;
   }
   
-  /* === LOGO === */
   .navbar-logo {
     width: 60px;
     height: auto;
     object-fit: contain;
   }
   
-  /* === BRAND / LEFT SIDE === */
   .navbar-brand {
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #222831;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   
-  /* === CALL BUTTON DESKTOP === */
-  .navbar .btn-call {
-    color: #fff;
-    border: 2px solid var(--accent-color, #00ADB5);
-    background-color: transparent;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar .btn-call:hover {
-    background-color: var(--accent-color, #00ADB5);
-    color: #222;
-    text-decoration: none;
-  }
-  
-  /* === TOGGLER ICON === */
-  .navbar-toggler {
-    border: none;
-    padding: 0.5rem;
-  }
-  
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23EEEEEE' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28238, 238, 238, 0.95%29)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  }
-  
-  /* === NAV MENU === */
-  .navbar-nav {
-    text-align: right;
-  }
-  
-  .nav-link {
-    color: var(--neutral-color, #EEEEEE);
+  /* Menu links */
+  .navbar-nav .nav-link {
+    color: #222831; /* dark text */
     font-size: 1rem;
-    padding: 0.5rem 1rem;
     font-weight: 500;
-    transition: color 0.2s ease;
+    padding: 0.5rem 1rem;
   }
   
-  .nav-link:hover,
-  .nav-link:focus {
-    color: var(--highlight-color, #FFD369);
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #FFD369; /* yellow hover */
     text-decoration: none;
   }
   
-  /* === DROPDOWN MENU === */
+  /* Make sure active doesn't stay white */
+  .navbar-nav .nav-link.active {
+    color: #222831;
+  }
+  
+  /* Dropdown menu */
   .dropdown-menu {
-    background-color: var(--neutral-color);
-    border: none;
+    background-color: #f0f0f0;
     border-radius: 8px;
+    border: none;
   }
   
   .dropdown-item {
-    color: var(--primary-color);
+    color: #222831;
     padding: 0.5rem 1rem;
   }
   
   .dropdown-item:hover {
-    background-color: var(--highlight-color, #FFD369);
-    color: var(--primary-color, #222831);
+    background-color: #FFD369;
+    color: #000;
   }
   
-  /* === MOBILE MENU ADJUSTMENTS === */
+  /* Call Button (Yellow) */
+  .btn-call {
+    background-color: #FFD369;
+    color: #222;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-call:hover {
+    background-color: #ffcc33;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Mobile-specific */
   @media (max-width: 991px) {
     .navbar-nav {
       width: 100%;
       align-items: flex-end;
+      text-align: right;
     }
   
     .navbar-nav .nav-item {
@@ -918,13 +901,11 @@ a:hover {
     }
   
     .navbar-nav .nav-link {
-      text-align: right;
-      display: block;
       width: 100%;
+      display: block;
       padding-right: 1rem;
     }
   
-    /* Show call button inside mobile nav */
     .btn-call {
       display: block;
       margin: 0.5rem 1rem;
@@ -932,17 +913,6 @@ a:hover {
     }
   }
   
-  /* === MOBILE LOGO ALIGNMENT === */
-  @media (max-width: 575px) {
-    .navbar-logo {
-      width: 50px;
-    }
-  
-    .navbar .btn-call {
-      font-size: 0.85rem;
-      padding: 0.4rem 0.75rem;
-    }
-  }
   
   
   
