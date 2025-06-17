@@ -812,7 +812,7 @@ a:hover {
 
 /* Desktop navbar background and logo size */
 .navbar {
-    background-color: rgba(34, 40, 49, 0.98); /* Less transparent background */
+    background-color: rgba(89, 93, 100, 0.726); /* Less transparent background */
     padding: 1rem 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
