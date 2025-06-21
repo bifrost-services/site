@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiFrost Login</title>
+  <link rel="stylesheet" href="general.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body class="bifrost-login-body">
+  <div class="bifrost-login-container">
+    <h2 class="bifrost-login-title">Log In to BiFrost Portal</h2>
+    <form id="bifrost-login-form" class="bifrost-login-form">
+      <input type="email" id="bifrost-email" placeholder="Email" required />
+      <input type="password" id="bifrost-password" placeholder="Password" required />
+      <button type="submit" class="bifrost-login-button">Login</button>
+      <p id="bifrost-login-error" class="bifrost-login-error"></p>
+    </form>
+  </div>
+
+  <script type="module" src="scripts/auth.js"></script>
+</body>
+</html>
