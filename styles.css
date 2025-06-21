@@ -804,120 +804,131 @@ a:hover {
 
 
 
-/* === BiFrost Navbar Styles === */
-.bifrost-navbar {
-  background-color: #f9f9f9;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1050;
-}
-
-.bifrost-logo {
-  width: 60px;
-  height: auto;
-  object-fit: contain;
-}
-
-.navbar-nav .nav-link {
-  color: #222831;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:focus {
-  color: #ffb700;
-}
-
-.dropdown-menu {
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border: none;
-}
-
-.dropdown-item {
-  color: #222831;
-  padding: 0.5rem 1rem;
-}
-
-.dropdown-item:hover {
-  background-color: #ffd369;
-  color: #000;
-}
-
-/* === Call Button === */
-.bifrost-call-btn {
-  background-color: #ffd369;
-  color: #000;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.bifrost-call-btn:hover {
-  background-color: #ffcc33;
-  color: #000;
-}
-
-/* === Login Button === */
-.bifrost-login-btn {
-  background-color: #00adb5;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  margin-left: 0.5rem;
-  transition: background-color 0.3s ease;
-}
-
-.bifrost-login-btn:hover {
-  background-color: #00979d;
-  color: #fff;
-}
-
-/* === Mobile Menu === */
-@media (max-width: 991.98px) {
-  .navbar-collapse {
+/* === NAVBAR STYLES === */
+.navbar {
     background-color: #f9f9f9;
-    padding: 1rem;
-    border-radius: 0 0 12px 12px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
   }
-
-  .navbar-nav {
-    text-align: right;
-    width: 100%;
+  
+  .navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-
-  .navbar-nav .nav-item {
-    width: 100%;
-    margin-bottom: 0.5rem;
+  
+  .navbar-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
   }
-
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222831;
+    text-decoration: none;
+  }
+  
+  /* === MENU LINKS === */
   .navbar-nav .nav-link {
-    display: block;
-    width: 100%;
+    color: #222831;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s ease;
   }
-}
-
-@media (max-width: 575.98px) {
-  .bifrost-logo {
-    width: 50px;
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: #ffb700;
   }
-
-  .bifrost-call-btn,
-  .bifrost-login-btn {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.75rem;
+  
+  .navbar-nav .nav-link.active {
+    color: #222831;
   }
-}
+  
+  /* === DROPDOWN MENU === */
+  .dropdown-menu {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    color: #222831;
+    padding: 0.5rem 1rem;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #FFD369;
+    color: #000;
+  }
+  
+  /* === CALL BUTTON === */
+  .btn-call {
+    background-color: #FFD369;
+    color: #000;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-call:hover {
+    background-color: #ffcc33;
+    color: #000;
+  }
+  
+  /* === MOBILE STYLES === */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-radius: 0 0 10px 10px;
+    }
+  
+    .navbar-nav {
+      width: 100%;
+      align-items: flex-end;
+      text-align: right;
+    }
+  
+    .navbar-nav .nav-item {
+      width: 100%;
+    }
+  
+    .navbar-nav .nav-link {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+    }
+  
+    .btn-call {
+      display: block;
+      margin: 1rem auto;
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .navbar-logo {
+      width: 50px;
+    }
+  
+    .btn-call {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.75rem;
+    }
+  }
+  
   
   
   
@@ -1362,10 +1373,6 @@ a:hover {
 }
 
 
-
-
-
-
 /* Scoped Styles for forms.html */
 
 .bifrost-forms-page {
@@ -1412,64 +1419,4 @@ a:hover {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-
-
-/* === BiFrost Login Styles === */
-.bifrost-login-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #1f1f1f, #333);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.bifrost-login-container {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  width: 100%;
-  max-width: 400px;
-}
-
-.bifrost-login-title {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
-}
-
-.bifrost-login-form input {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #aaa;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-.bifrost-login-button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #4a90e2;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.bifrost-login-button:hover {
-  background-color: #3a78c2;
-}
-
-.bifrost-login-error {
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  text-align: center;
 }
