@@ -1371,3 +1371,41 @@ a:hover {
         flex: 1 1 100%; /* Full-width columns on smaller screens */
     }
 }
+
+
+
+/* Scoped Styles for forms.html */
+.bifrost-forms-page {
+  padding: 2rem 1rem;
+}
+
+.bifrost-forms-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bifrost-forms-hero p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.bifrost-form-section {
+  margin-top: 2rem;
+}
+
+.bifrost-form-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.bifrost-iframe-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.bifrost-iframe-wrapper iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+}
