@@ -1420,3 +1420,63 @@ a:hover {
   height: 100%;
   border: none;
 }
+
+
+
+/* === BiFrost Login Styles === */
+.bifrost-login-body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1f1f1f, #333);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.bifrost-login-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+.bifrost-login-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.bifrost-login-form input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.bifrost-login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.bifrost-login-button:hover {
+  background-color: #3a78c2;
+}
+
+.bifrost-login-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
