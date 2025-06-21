@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms Dashboard - BiFrost Industrial Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <section class="hero">
+      <h1>Your Forms</h1>
+      <p>Welcome! Select a form below to begin submission.</p>
+    </section>
+
+    <section>
+      <h2>Echo Soil Solutions Disposal Form</h2>
+      <div class="iframe-container">
+        <iframe
+          id="JotFormIFrame-251665645749067"
+          title="Echo Soil Solutions Disposal Form"
+          onload="window.parent.scrollTo(0,0)"
+          allowtransparency="true"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/251665645749067"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+        <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+        <script>
+          window.jotformEmbedHandler("iframe[id='JotFormIFrame-251665645749067']", "https://form.jotform.com/");
+        </script>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load Navbar and Footer -->
+  <script>
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar-placeholder").innerHTML = data);
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+  </script>
+</body>
+</html>
