@@ -804,150 +804,120 @@ a:hover {
 
 
 
-/* === NAVBAR STYLES === */
-.navbar {
-    background-color: #f9f9f9;
-    padding: 0.75rem 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-  }
-  
-  .navbar .container-fluid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* === LOGIN BUTTON === */
-.btn-login {
-  background-color: #00ADB5;
-  color: #fff;
+/* === BiFrost Navbar Styles === */
+.bifrost-navbar {
+  background-color: #f9f9f9;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1050;
+}
+
+.bifrost-logo {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+  color: #222831;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #ffb700;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.dropdown-item {
+  color: #222831;
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #ffd369;
+  color: #000;
+}
+
+/* === Call Button === */
+.bifrost-call-btn {
+  background-color: #ffd369;
+  color: #000;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
   font-weight: bold;
   font-size: 1rem;
-  text-align: center;
+  border-radius: 6px;
   text-decoration: none;
-  display: inline-block;
   transition: background-color 0.3s ease;
 }
 
-.btn-login:hover {
-  background-color: #00959c;
+.bifrost-call-btn:hover {
+  background-color: #ffcc33;
+  color: #000;
+}
+
+/* === Login Button === */
+.bifrost-login-btn {
+  background-color: #00adb5;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-left: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.bifrost-login-btn:hover {
+  background-color: #00979d;
   color: #fff;
 }
-  .navbar-logo {
-    width: 60px;
-    height: auto;
-    object-fit: contain;
+
+/* === Mobile Menu === */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
   }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #222831;
-    text-decoration: none;
+
+  .navbar-nav {
+    text-align: right;
+    width: 100%;
   }
-  
-  /* === MENU LINKS === */
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
   .navbar-nav .nav-link {
-    color: #222831;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.2s ease;
+    display: block;
+    width: 100%;
   }
-  
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus {
-    color: #ffb700;
+}
+
+@media (max-width: 575.98px) {
+  .bifrost-logo {
+    width: 50px;
   }
-  
-  .navbar-nav .nav-link.active {
-    color: #222831;
+
+  .bifrost-call-btn,
+  .bifrost-login-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.75rem;
   }
-  
-  /* === DROPDOWN MENU === */
-  .dropdown-menu {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown-item {
-    color: #222831;
-    padding: 0.5rem 1rem;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #FFD369;
-    color: #000;
-  }
-  
-  /* === CALL BUTTON === */
-  .btn-call {
-    background-color: #FFD369;
-    color: #000;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-call:hover {
-    background-color: #ffcc33;
-    color: #000;
-  }
-  
-  /* === MOBILE STYLES === */
-  @media (max-width: 991px) {
-    .navbar-collapse {
-      background-color: #f9f9f9;
-      padding: 1rem;
-      border-radius: 0 0 10px 10px;
-    }
-  
-    .navbar-nav {
-      width: 100%;
-      align-items: flex-end;
-      text-align: right;
-    }
-  
-    .navbar-nav .nav-item {
-      width: 100%;
-    }
-  
-    .navbar-nav .nav-link {
-      display: block;
-      width: 100%;
-      padding: 0.75rem 1rem;
-    }
-  
-    .btn-call {
-      display: block;
-      margin: 1rem auto;
-      width: 90%;
-    }
-  }
-  
-  @media (max-width: 575px) {
-    .navbar-logo {
-      width: 50px;
-    }
-  
-    .btn-call {
-      font-size: 0.9rem;
-      padding: 0.4rem 0.75rem;
-    }
-  }
-  
+}
   
   
   
