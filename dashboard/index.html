@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BiFrost Dashboard</title>
+  <link rel="stylesheet" href="general.css" />
+  <script type="module" src="scripts/dashboard.js"></script>
+</head>
+<body class="bifrost-dashboard-body">
+  <!-- ===== NAV BAR ===== -->
+  <nav class="bifrost-dashboard-nav">
+    <div class="bifrost-logo">BiFrost</div>
+    <ul class="bifrost-nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">My Forms</a></li>
+      <li><a href="#" id="bifrost-logout-link">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== DASHBOARD CONTENT ===== -->
+  <main class="bifrost-dashboard-main">
+    <h1>Welcome, <span id="bifrost-company-name">...</span></h1>
+    <p>Your assigned forms:</p>
+    <ul id="bifrost-forms-list"></ul>
+
+    <section id="bifrost-admin-section" class="bifrost-admin-section hidden">
+      <h2>Admin Panel</h2>
+      <p>You are an admin. Admin tools will appear here.</p>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bifrost-footer">
+    <p>&copy; 2025 BiFrost Industrial Services</p>
+  </footer>
+</body>
+</html>
