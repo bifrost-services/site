@@ -47,7 +47,7 @@ document.getElementById("bifrost-login-form").addEventListener("submit", async (
     sessionStorage.setItem("userCompany", userData.company);
 
     // Redirect to dashboard
-    window.location.href = "dashboard.html";
+    window.location.href = "/dashboard/index.html";
   } catch (error) {
     console.error("Login error:", error);
     errorMsg.textContent = "Login failed. Check your email and password.";
